@@ -111,6 +111,23 @@
           text-decoration: none;
           color: black;
          }
+         #loading {
+  display: block;
+  z-index: 100;
+  width: 450px;
+  height: 600px;
+  background-image: url("https://cdn.dribbble.com/users/2138/screenshots/6782041/music-icons_2x.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+   position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+.page{display: none;}
       </style>
       <script>
          function alert(){
@@ -124,6 +141,24 @@
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
       <script>
          // place your projecttitle in this array
+
+         function onReady(callback) {
+  var intervalId = window.setInterval(function() {
+    if (document.getElementsByTagName('body')[0] !== undefined) {
+      window.clearInterval(intervalId);
+      callback.call(this);
+    }
+  }, 3000);
+}
+
+function setVisible(selector, visible) {
+  document.querySelector(selector).style.display = visible ? 'block' : 'none';
+}
+
+onReady(function() {
+  setVisible('.page', true);
+  setVisible('#loading', false);
+});
          
          
          var projectmoniker= [
@@ -639,6 +674,8 @@
       </script>
    </head>
    <body>
+
+    <div class="page">
       <!--<div style="float: left;">L </div>
          <div style="float: right">R</div>
          <div style="text-align: center; margin: 0 auto; cursor: default;">C</div>-->
@@ -701,5 +738,7 @@
          </div>
       </div>
       <h5 style="text-align: right; position: absolute; right: 20px; bottom: 0px;"><a href="https://forms.gle/qbyJeoHymXdg3SQa7" class="google">google form</a> // v. 0.063</h5>
+    </div>
+    <div id="loading"></div>
    </body>
 </html>
