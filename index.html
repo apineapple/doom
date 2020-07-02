@@ -12,6 +12,9 @@
 
       <title>.mp3</title>
       <style>
+        .google:hover {
+          color: red;
+        }
          body {
          font-family: Arial, Helvetica, sans-serif;
          font-size:16px;
@@ -272,7 +275,7 @@
          
          if (imnumb < projecttitle.length && imgn != null) { //all rows except the last one
          
-           document.write("<style>.grid-containera {border-bottom: 2.5px solid black; padding-bottom:10px; width:100%; height:20px; }.grid-item {text-align: center; position:relative;} </style> <div class='grid-containera'><div class='grid-item' style='margin-right:10px;''><h6 style='margin-top: 0px;'>"+lnkn+" - "+imgn+" ["+bruhb+"] "+bruh+"</h6></div></div>");
+           document.write("<style>.grid-containera {border-bottom: 2.5px solid black; padding-bottom:10px; width:100%; height:20px; }.grid-item {text-align: center; position:relative;} </style> <div class='grid-containera'><div class='grid-item' style='margin-right:10px;'><h6 style='margin-top: 0px;'>"+lnkn+" - "+imgn+" ["+bruhb+"] "+bruh+"</h6></div></div>");
          
          }
          
@@ -313,84 +316,146 @@
          
          
          var videotitle = [
-          'KMD',
-          'KMD',
-          'KMD',
-          'KMD',
-          'MF DOOM',
-          'King Geedorah',
-          'Victor Vaughn',
-          'Victor Vaughn',
-          'MF DOOM',
-          'DOOM',
-          'MF DOOM',
-          'MF DOOM',
-          'Madvillain',
-          'Danger Doom',
-          'JJ Doom',
-          'NehruvianDoom',
-          'MF DOOM & Czarface',
-          'MF DOOM',
-          'MF DOOM',
-          'MF DOOM',
-          'MF DOOM & MF Grimm',
-          'Danger Doom',
-          'MF DOOM & Trunks',
-          'MF DOOM & Westside Gunn'
+          'Who Me?',
+          'Peachfuzz',
+          'I Hear Voices',
+          'Dead Bent',
+          '?',
+          'My Favorite Ladies',
+          'The Final Hour',
+          'Mr. Clean',
+          'Accordion',
+          'Rhinestone Cowboy',
+          'ALL CAPS',
+          'A.T.H.F. (Aqua Teen Hunger Force)',
+          'Monkey Suite',
+          'Gunfight',
+          'Outta Control',
+          'Invisible Man',
+          'Benetton',
+          'Guv&apos;nor',
+          'Bookhead',
+          'Bookhead Remix',
+          'Darkness (HBU)',
+          'Ray Gun',
+          'Masking',
+          'Frankie Sinatra',
+          'Superhero',
+          'Bomb Thrown',
+          'Mettle With Metal',
+          'Death Wish',
+          'Drop the Bomb',
+          'Assasination Day',
+          'One Beer',
+          'Meathead'
          ];
          
          var videotype = [
-          'A',
-          'A',
-          'A',
-          'A',
-           'A',
-          'A',
-          'A',
-          'A',
-           'A',
-          'A',
-          'LA',
-          'LA',
-           'A',
-          'A',
-          'A',
-          'A',
-           'A',
-          'A',
-          'A',
-          'A',
-          'EP',
-          'EP',
-          'EP',
-          'EP'
+          'MV',
+          'MV',
+          'MV',
+          'MV',
+          'MV',
+          'MV',
+          'MV',
+          'MV',
+          'MV',
+          'MV',
+          'MV',
+          'MV',
+          'MV',
+          'MV',
+          'MV',
+          'MV',
+          'MV',
+          'MV',
+          'MV',
+          'MV',
+          'MV',
+          'MV',
+          'MV',
+          'MV',
+          'MV',
+          'MV',
+          'MV',
+          'MV',
+          'MV',
+          'MV',
+          'MV',
+          'MV'
          ];
          
           var videodate = [
-          '05/14/91',
-          '05/15/01',
-          '?/?/98',
-          '11/18/03',
-          '04/20/99',
-          '06/17/03',
-          '09/16/03',
-          '08/03/04',
-          '11/16/04',
-          '03/24/09',
-          '03/08/05',
-          '09/14/10',
-          '03/24/04',
-          '10/10/05',
-          '08/20/12',
-          '10/07/14',
-          '03/30/18',
+          '?/?/91',
+          '?/?/91',
+          '?/?/99',
+          '?/?/99',
+          '?/?/00',
+          '?/?/01',
+          '?/?/03',
+          '?/?/03',
           '?/?/04',
-          '1/24/06',
-          '10/27/09',
-          '11/28/00',
-          '03/30/06',
-          '1/??/08',
-          '10/13/17'
+          '?/?/04',
+          '?/?/04',
+          '?/?/05',
+          '?/?/06',
+          '?/?/07',
+          '?/?/07',
+          '?/?/07',
+          '?/?/09',
+          '?/?/12',
+          '?/?/13',
+          '?/?/14',
+          '?/?/14',
+          '?/?/15',
+          '?/?/15',
+          '?/?/16',
+          '?/?/16',
+          '?/?/18',
+          '?/?/18',
+          '?/?/18',
+          '?/?/18',
+          '?/?/18',
+          '?/?/20'
+         ];
+
+         var videoartist = [
+          'KMD',
+          'KMD',
+          'MF DOOM',
+          'MF DOOM',
+          'MF DOOM & Kurious',
+          'MF DOOM',
+          'King Geedorah',
+          'Victor Vaughn',
+          'Madvillain',
+          'Madvillain',
+          'Madvillain',
+          'Danger Doom',
+          'Madvillain',
+          'MF DOOM & The Mighty Underdog',
+          'MF DOOM & John Robinson',
+          'MF DOOM & John Robinson & 20/20',
+          'MF DOOM & Kurious & MC Serch',
+          'JJ DOOM',
+          'JJ DOOM',
+          'MF DOOM',
+          'NehruvianDoom',
+          'MF DOOM & BadBadNotGood & Ghostface Killah',
+          'King Dumile',
+          'MF DOOM &  The Avalanches & Danny Brown',
+          'MF DOOM & Kool Keith',
+          'MF DOOM & Czarface',
+          'MF DOOM & DJ MUGGS & Freddie Gibbs',
+          'MF DOOM',
+          'MF DOOM & YOTA : Youth of the Apocalypse',
+          'MF DOOM & DJ MUGGS & Kool G Rap',
+          'MF DOOM',
+          'MF DOOM & Bishop Nehru'
+         ];
+
+         var videolink = [
+
          ];
 
          
@@ -405,18 +470,19 @@
          var imgv = videotitle[ vid ];
          var bruhv = videodate [ vid ];
          var bruhvb = videotype [ vid ];
+         var artv = videoartist[ vid ];
          
          
          
          if (vidb < videotitle.length && imgv != null) { //all rows except the last one
          
-           document.write("<style>.grid-containera {border-bottom: 2.5px solid black; padding-bottom:10px; width:100%; height:20px; }.grid-item {text-align: center; position:relative;} </style> <div class='grid-containera'><div class='grid-item' style='margin-right:10px;''><h6 style='margin-top: 0px;'>"+imgv+", ["+bruhvb+"] "+bruhv+"</h6></div></div>");
+           document.write("<style>.grid-containera {border-bottom: 2.5px solid black; padding-bottom:10px; width:100%; height:20px; }.grid-item {text-align: center; position:relative;} </style> <div class='grid-containera'><div class='grid-item' style='margin-right:10px;''><h6 style='margin-top: 0px;'>"+imgv+" - "+artv+" ["+bruhvb+"] "+bruhv+"</h6></div></div>");
          
          }
          
          else if (vidb >= videotitle.length && imgv != null){ //the last row if it has 3 videotitle
          
-            document.write("<style>.grid-containerb {border-bottom: 2.5px solid black; padding-bottom:10px; width:100%; height:20px; margin-bottom: 0px;}</style><div class='grid-containerb'><div class='grid-item' style='margin-right:10px;'><h6 style='margin-top: 0px;'>"+imgv+", ["+bruhvb+"] "+bruhv+"</h6></div></div>");
+            document.write("<style>.grid-containerb {border-bottom: 2.5px solid black; padding-bottom:10px; width:100%; height:20px; margin-bottom: 0px;}</style><div class='grid-containerb'><div class='grid-item' style='margin-right:10px;'><h6 style='margin-top: 0px;'>"+imgv+" - "+artv+" ["+bruhvb+"] "+bruhv+"</h6></div></div>");
          
          }
 
@@ -460,7 +526,8 @@
           'MF DOOM & Czarface',
           'MF DOOM & MF Grimm',
           'MF DOOM & Trunks',
-          'MF DOOM & Westside Gunn'
+          'MF DOOM & Westside Gunn',
+          'King Dumile'
          ];
          
          moniker.sort();
@@ -587,7 +654,7 @@
                <h2 style="margin-top: -20px;" id="son">SONGS</h2>
                <h2 style="margin-top: -20px;" id="vid">VIDEOS</h2>
                <h2 style="margin-top: -20px;" id="lea">LEAKS</h2>
-              <a href="#googledrive"> <h2 style="margin-top: -20px;">DISCOGRAPHY</h2> </a>
+              <a href="https://docs.google.com/spreadsheets/d/18W354RRGGWPz6EFsPX4LYwSHygT0zq8P2bOhOwk45nc/edit?usp=sharing"> <h2 style="margin-top: -20px;">DISCOGRAPHY</h2> </a>
                <h2 style="margin-top: -20px; border-bottom: none;" id="mon">MONIKERS</h2>
             </div>
             <div id="projects">
@@ -633,6 +700,6 @@
             </div>
          </div>
       </div>
-      <h5 style="position: absolute; right: 20px; bottom: 0px;">v. 0.063</h5>
+      <h5 style="text-align: right; position: absolute; right: 20px; bottom: 0px;"><a href="https://forms.gle/qbyJeoHymXdg3SQa7" class="google">google form</a> // v. 0.063</h5>
    </body>
 </html>
