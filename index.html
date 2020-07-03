@@ -260,7 +260,8 @@
   var videotype = ['MV', 'MV', 'MV', 'MV', 'MV', 'MV', 'MV', 'MV', 'MV', 'MV', 'MV', 'MV', 'MV', 'MV', 'MV', 'MV', 'MV', 'MV', 'MV', 'MV', 'MV', 'MV', 'MV', 'MV', 'MV', 'MV', 'MV', 'MV', 'MV', 'MV', 'MV', 'MV'];
   var videodate = ['?/?/91', '?/?/91', '?/?/99', '?/?/99', '?/?/00', '?/?/01', '?/?/03', '?/?/03', '?/?/04', '?/?/04', '?/?/04', '?/?/05', '?/?/06', '?/?/07', '?/?/07', '?/?/07', '?/?/09', '?/?/12', '?/?/13', '?/?/14', '?/?/14', '?/?/15', '?/?/15', '?/?/16', '?/?/16', '?/?/18', '?/?/18', '?/?/18', '?/?/18', '?/?/18', '?/?/20'];
   var videoartist = ['KMD', 'KMD', 'MF DOOM', 'MF DOOM', 'MF DOOM & Kurious', 'MF DOOM', 'King Geedorah', 'Victor Vaughn', 'Madvillain', 'Madvillain', 'Madvillain', 'Danger Doom', 'Madvillain', 'MF DOOM & The Mighty Underdog', 'MF DOOM & John Robinson', 'MF DOOM & John Robinson & 20/20', 'MF DOOM & Kurious & MC Serch', 'JJ DOOM', 'JJ DOOM', 'MF DOOM', 'NehruvianDoom', 'MF DOOM & BadBadNotGood & Ghostface Killah', 'King Dumile', 'MF DOOM &  The Avalanches & Danny Brown', 'MF DOOM & Kool Keith', 'MF DOOM & Czarface', 'MF DOOM & DJ MUGGS & Freddie Gibbs', 'MF DOOM', 'MF DOOM & YOTA : Youth of the Apocalypse', 'MF DOOM & DJ MUGGS & Kool G Rap', 'MF DOOM', 'MF DOOM & Bishop Nehru'];
-  var videolink = [];
+  var videolink = ['https://www.youtube.com/watch?v=w5cvKVg0-Zg', 'https://www.youtube.com/watch?v=HW17mVZqnjI', 'https://www.youtube.com/watch?v=pwmeMXMfAT8', 'https://www.youtube.com/watch?v=vnNVAdBXh_Y', 'https://www.youtube.com/watch?v=56vFQYLX_XI', 'https://www.youtube.com/watch?v=wNGnCLod-qg', 'https://www.youtube.com/watch?v=sKDeN198j8M', 'https://www.youtube.com/watch?v=WyiB-lkQBFY', 'https://www.youtube.com/watch?v=rpaonSDPw7Y', 'https://www.youtube.com/watch?v=s4iR668Ki3I', 'https://www.youtube.com/watch?v=ewc1hixzYPY', 'https://www.youtube.com/watch?v=ysHAxWO85EE', 'https://www.youtube.com/watch?v=nzUY6Iiur6E', 'https://www.youtube.com/watch?v=Ll9e9baDUtM', 'https://www.youtube.com/watch?v=LeHNc8kA0WY', 'https://www.youtube.com/watch?v=yjD15kxCe5A', 'https://www.youtube.com/watch?v=GAJT5E48jn0', 'https://www.youtube.com/watch?v=WW-9TcDTKa8', 'https://www.youtube.com/watch?v=jTCI_bqMi_w', 'https://www.youtube.com/watch?v=lqiPOSWUjMQ', 'https://www.youtube.com/watch?v=z6PIL0mTNug', 'https://www.youtube.com/watch?v=6YW_RqTuZMw', 'youtube.com/watch?v=8CwZen9b5mU', 'https://www.youtube.com/watch?v=SjfspM5sDIA', 'https://www.youtube.com/watch?v=lJGXSybL1NY', 'https://www.youtube.com/watch?v=_YiHjUXQpLM', 'https://www.youtube.com/watch?v=mUanYFSi6Wk', 'https://www.youtube.com/watch?v=gK3Aw7a_EyA', 'https://www.youtube.com/watch?v=X9hRLLj1Ur0', 'https://www.youtube.com/watch?v=8V5jOg_VGMA', 'https://www.youtube.com/watch?v=h69FSgua80A', 'https://www.youtube.com/watch?v=smVoxgny20U'];
+
   var vid = 0;
   var vidb = 1;
 
@@ -270,10 +271,12 @@
       var bruhv = videodate[vid];
       var bruhvb = videotype[vid];
       var artv = videoartist[vid];
+      var lnkv = videolink[vid];
+
       if(vidb < videotitle.length && imgv != null) { //all rows except the last one
-        document.write("<style>.grid-containera {border-bottom: 2.5px solid black; padding-bottom:10px; width:100%; height:20px; }.grid-item {text-align: center; position:relative;} </style> <div class='grid-containera'><div class='grid-item' style='margin-right:10px;''><h6 style='margin-top: 0px;'>" + imgv + " - " + artv + " [" + bruhvb + "] " + bruhv + "</h6></div></div>");
+        document.write("<style>.grid-containera {border-bottom: 2.5px solid black; padding-bottom:10px; width:100%; height:20px; }.grid-item {text-align: center; position:relative;} </style> <div class='grid-containera'><div class='grid-item' style='margin-right:10px;''><a href='"+lnkv+"'><h6 style='margin-top: 0px;'>" + imgv + " - " + artv + " [" + bruhvb + "] " + bruhv + "</h6></a></div></div>");
       } else if(vidb >= videotitle.length && imgv != null) { //the last row if it has 3 videotitle
-        document.write("<style>.grid-containerb {border-bottom: 2.5px solid black; padding-bottom:10px; width:100%; height:20px; margin-bottom: 0px;}</style><div class='grid-containerb'><div class='grid-item' style='margin-right:10px;'><h6 style='margin-top: 0px;'>" + imgv + " - " + artv + " [" + bruhvb + "] " + bruhv + "</h6></div></div>");
+        document.write("<style>.grid-containerb {border-bottom: 2.5px solid black; padding-bottom:10px; width:100%; height:20px; margin-bottom: 0px;}</style><div class='grid-containerb'><div class='grid-item' style='margin-right:10px;'><a href='"+lnkv+"'><h6 style='margin-top: 0px;'>" + imgv + " - " + artv + " [" + bruhvb + "] " + bruhv + "</h6></a></div></div>");
       }
       vid = vid + 1;
       vidb = vidb + 1;
@@ -444,7 +447,7 @@
         </div>
       </div>
     </div>
-    <h5 style="text-align: right; position: absolute; right: 20px; bottom: 0px;"><a href="https://forms.gle/qbyJeoHymXdg3SQa7" class="google">google form</a> // <a class="google" href="https://github.com/apineapple/doom">v. 0.07</a></h5> </div>
+    <h5 style="text-align: right; position: absolute; right: 20px; bottom: 0px;"><a href="https://forms.gle/qbyJeoHymXdg3SQa7" class="google">google form</a> // <a class="google" href="https://github.com/apineapple/doom">v. 0.08</a></h5> </div>
   <div id="loading"></div>
 </body>
 </html>
